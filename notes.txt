@@ -1,0 +1,60 @@
+ESTRUCTURA
+nav: barras de navegacion
+header: cabecera
+section: maquetar secciones / dividir
+div: para dividir y estructurar
+br: salto de linea
+
+TEXTO E IMAGENES
+p: para texto o contenido
+a href: links
+span: para pequeños bloques de texto
+small: texto pequeño
+strong: negritas
+sup: superindice
+sub: subindice
+i: crea texto en italica
+em: crea texto en italica
+img src alt: imagen #http://via.placeholder.com/width*height
+
+LISTAS
+ol: lista ordenada
+li: item de lista
+ul: lista desordenada
+
+EMMET
+p[lorem ipsum]
+ul>li[lorem ipsum]*3
+nav>ul>li*5>a
+
+TABLAS
+table
+    thead
+        tr
+            th
+        /tr
+    /thead
+    tbody
+        tr
+            td
+        /tr
+    /tbody
+
+FORMULARIOS
+form action
+
+    label for
+
+    input type="text"
+    input type="name"
+    input type="email"
+    input type="number"
+    input type="color"
+    input type="submit"
+    input type="checkbox" id*
+    input type="radio"
+/form
+button
+text area
+select
+    option value selected*

@@ -1,0 +1,314 @@
+// Estilos 2021
+// Version 1.0.0
+$base: #060a0f
+$sec: #494949
+$outline: #ff6500
+$text: transparentize($sec, 0.5)
+$transition_time: 0.5s
+$cut: polygon(100% 0%, 100% 100%, 50% 85%, 0% 100%, 0% 0%)
+$circle: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+$square: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%)
+$inverse_arrow: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%)
+
+a
+    margin: 0px
+    padding: 0px
+    @extend .tSlow
+    &:hover
+        color: $outline
+
+h1,h2,h3,h4,h5,h6
+    color: $base
+
+p
+    color: $sec
+
+.tSlow
+    -webkit-transition: all $transition_time ease-in-out
+    -o-transition: all $transition_time ease-in-out
+    transition: all $transition_time ease-in-out
+
+.pad_200
+    padding: 200px 0px
+
+.center
+    text-align: center
+    margin: 0px auto
+
+.main-title
+    font-weight: bold
+    color: $base
+    font-size: 60px
+
+.rounded-circle
+    width: 250px
+    height: 250px
+    @extend .rombo
+
+.rombo
+    clip-path: $circle
+    -webkit-clip-path: $circle
+    -o-clip-path: $circle
+    @extend .tSlow
+    &:hover
+        clip-path: $square
+        -webkit-clip-path: $square
+        -o-clip-path: $square
+
+.diamante
+    display: block
+    position: relative
+    width: 100%
+    overflow: hidden
+    margin: 0px auto
+    background-image: url("../images/profile.jpg")
+    background-size: 100%
+    background-position: center center
+    background-repeat: no-repeat
+    z-index: 200
+    @extend .rombo
+
+input,
+select,
+option,
+textarea
+    width: 100%
+    padding: 10px 15px
+    border: 1px solid $base
+    margin: 5px 0px
+    opacity: 0.5
+    @extend .tSlow
+    &:hover,
+    &:focus
+        opacity: 1
+        color: $base
+
+textarea
+    max-width: 100%
+    min-width: 100%
+    min-height: 150px
+    max-height: 250px
+
+button
+    background-color: transparent
+    text-transform: uppercase
+    border: 1px solid $base
+    padding: 10px 20px
+    margin: 5px 0px
+    color: $base
+    font-size: 16px
+    letter-spacing: 1px
+    cursor: pointer
+    opacity: 0.7
+    @extend .tSlow
+    &:hover
+        opacity: 1
+        background-color: $base
+        color: white
+
+.black
+    background-color: $base
+    opacity: 1
+    color: white
+    &:hover
+        background-color: $outline
+        border: 1px solid $outline
+
+nav
+    width: 100%
+    background-color: transparentize(white, .8)
+    padding: 10px 0px
+    position: fixed
+    border-bottom: 1px solid transparent
+    z-index: 100
+    @extend .tSlow
+    &:hover
+        background-color: white
+        padding: 25px 0px
+        border: 1px solid transparentize($base, 0.9)
+        .logo
+            img
+                width: 80%
+        ul
+            margin-top: 8px
+            li
+                a
+                    color: $text
+    .logo
+        img
+            width: 100%
+            @extend .tSlow
+    ul
+        position: relative
+        margin: 0px
+        margin-top: 15PX
+        padding: 0px
+        text-align: right
+        @extend .tSlow
+        .link-active
+            a
+                color: $base !important
+                &:after
+                    width: 100%
+                    background-color: $base
+                    @extend .tSlow
+        li
+            display: inline-block
+            padding: 0px 10px
+            a
+                position: relative
+                text-decoration: none
+                font-size: 16px
+                color: transparentize(white, .2)
+                text-transform: uppercase
+                @extend .tSlow
+                &:before
+                  content: ""
+                  position: absolute
+                  width: 100%
+                  background-color: transparent
+                  height: 1px  
+                  @extend .tSlow
+                &:after
+                    content: ""
+                    position: absolute
+                    top: 100%
+                    left: 0px
+                    width: 0%
+                    background-color: transparent
+                    height: 1px
+                    @extend .tSlow
+                &:hover
+                    text-decoration: none
+                    color: $base
+                    &:before
+                        width: 0%
+                        background-color: $base
+                    &:after
+                        width: 100%
+                        background-color: $base
+
+#slider
+    backface-visibility: hidden
+    clip-path: $cut
+    -webkit-clip-path: $cut
+    -o-clip-path: $cut
+
+#slippry
+    position: relative
+    h1, h2, h3, h4, h5, h6, p, a, button, small, span
+        position: absolute
+    p
+        width: 600px
+        color: black
+    .white_bg
+        background-color: transparentize(white, .2)
+        padding: 5px 10px
+    .left
+        left: 10%
+    .right
+        right: 200px
+    .top_250
+        top: 250px
+    .top_300
+        top: 300px
+    .top_375
+        top: 375px
+    .top_400
+        top: 400px
+    .top_450
+        top: 450px
+
+footer
+    margin-top: -60px
+    width: 100%
+    padding: 70px 0px
+    background-color: $base
+    clip-path: $inverse_arrow
+    -webkit-clip-path: $inverse_arrow
+    -o-clip-path: $inverse_arrow
+    p
+        margin: 0px
+        padding: 0px
+    .white
+        color: transparentize(white, .6)
+    ul
+        padding: 0px
+        margin: 0px
+        list-style: none
+        li
+            padding: 0px
+            margin: 0px
+            color: transparentize(white, 0.8)
+    hr
+        border-radius: 10px
+        background-color: transparentize(white, 0.92)
+
+.tumblr
+    position: relative
+    float: left
+    margin: 0px
+    padding: 0px
+    width: 20%
+    cursor: pointer
+    opacity: 0.6
+    @extend .tSlow
+    &:hover
+        opacity: 1
+
+.copy
+    padding: 10px 0px
+    background-color: lighten($base, 0.8)
+    text-align: left
+    p, a
+        margin: 0px
+        padding: 0px
+        color: transparentize(white, 0.7)
+    a
+        opacity: 0.5
+        color: $outline
+        @extend .tSlow
+        &:hover
+            opacity: 1
+            text-decoration: none
+
+.social-networks
+    margin-top: 5px
+    li
+        display: inline-block
+        position: relative
+        margin: 0px 7px
+        float: left
+        width: 30px
+        height: 30px
+        text-align: center
+        -webkit-transform: rotate(0deg)
+        -ms-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+        backface-visibility: hidden
+        cursor: pointer
+        @extend .tSlow
+        i
+            font-size: 22px
+            color: transparentize(white, 0.8)
+            -webkit-transform: rotate(0deg) translate(-3px, 3px)
+            -ms-transform: rotate(0deg) translate(-3px, 3px)
+            -o-transform: rotate(0deg) translate(-3px, 3px)
+            transform: rotate(0deg) translate(-3px, 3px)
+            backface-visibility: hidden
+            @extend .tSlow
+        &:hover
+            -webkit-transform: rotate(45deg)
+            -ms-transform: rotate(45deg)
+            -o-transform: rotate(45deg)
+            transform: rotate(45deg) 
+            backface-visibility: hidden
+            background-color: white
+            i
+                color: $base
+                -webkit-transform: rotate(-45deg) translate(-3px, 3px)
+                -ms-transform: rotate(-45deg) translate(-3px, 3px)
+                -o-transform: rotate(-45deg) translate(-3px, 3px)
+                transform: rotate(-45deg) translate(-3px, 3px)
+                backface-visibility: hidden
