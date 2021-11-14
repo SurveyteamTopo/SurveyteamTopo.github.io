@@ -36,10 +36,10 @@
         <link rel="stylesheet" href="css/slippry.css">
 
         <!-- font awesome -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     </head>
-    <body>
+    <body style="background-color:white">
         <!-- navegacion -->
         <nav id="nav">
             <div class="container-fluid">
@@ -176,7 +176,16 @@
                     </div>
                     <div class="col-xl-6">
                         <p class="white"><strong>tumblr</strong></p>
-                        <img src="images/square_01.jpg" alt="01" class="tumblr"><img src="images/square_02.jpg" alt="02" class="tumblr"><img src="images/square_03.jpg" alt="03" class="tumblr"><img src="images/square_04.jpg" alt="04" class="tumblr"><img src="images/square_05.jpg" alt="05" class="tumblr"><img src="images/square_06.jpg" alt="06" class="tumblr"><img src="images/square_07.jpg" alt="07" class="tumblr"><img src="images/square_08.jpg" alt="08" class="tumblr"><img src="images/square_09.jpg" alt="09" class="tumblr"><img src="images/square_10.jpg" alt="10" class="tumblr">
+                        <img src="http://via.placeholder.com/100x100" alt="01" class="tumblr">
+                        <img src="http://via.placeholder.com/100x100" alt="02" class="tumblr">
+                        <img src="http://via.placeholder.com/100x100" alt="03" class="tumblr">
+                        <img src="http://via.placeholder.com/100x100" alt="04" class="tumblr">
+                        <img src="http://via.placeholder.com/100x100" alt="05" class="tumblr">
+                        <img src="http://via.placeholder.com/100x100" alt="06" class="tumblr">
+                        <img src="http://via.placeholder.com/100x100" alt="07" class="tumblr">
+                        <img src="http://via.placeholder.com/100x100" alt="08" class="tumblr">
+                        <img src="http://via.placeholder.com/100x100" alt="09" class="tumblr">
+                        <img src="http://via.placeholder.com/100x100" alt="10" class="tumblr">
                     </div>
                     <div class="col-xl-4">
                         <p class="white"><strong>contacto</strong></p>
@@ -188,7 +197,7 @@
                         <br>
                         <p class="white"><strong>redes sociales</strong></p>
                         <ul class="social-networks">
-                            <li><i class="fa fa-facebook"></i></li>
+                            <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
                             <li><i class="fa fa-twitter"></i></li>
                             <li><i class="fa fa-youtube"></i></li>
                             <li><i class="fa fa-tumblr"></i></li>
@@ -237,6 +246,17 @@
                 $('.diamante').css({
                     height: dn_width
                 });
+
+                var slider = $("#slider").height();
+                $(window).scroll(function(){
+                    var scroll = $(window).scrollTop();
+                    if(scroll >= $("#nosotros").offset().top) {
+                        $("#nav").addClass("nav-overlay");
+                    }else{
+                        $("#nav").removeClass("nav-overlay");
+                    }
+                });
+                $(window).scroll();
 
             });
         </script>
