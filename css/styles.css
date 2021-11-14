@@ -146,6 +146,7 @@ nav:hover ul li a {
 }
 nav .logo img {
   width: 100%;
+  aspect-ratio: auto;
 }
 nav ul {
   position: relative;
@@ -225,6 +226,7 @@ nav ul li a:hover:after {
 }
 
 #slippry {
+  z-index: 10;
   position: relative;
 }
 #slippry h1, #slippry h2, #slippry h3, #slippry h4, #slippry h5, #slippry h6, #slippry p, #slippry a, #slippry button, #slippry small, #slippry span {

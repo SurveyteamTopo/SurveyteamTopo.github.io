@@ -26,9 +26,9 @@ if (isset($_POST['submit'])) {
 	$info['fecha'] = date('d M Y h:m:s');
 
 	// Remitente y destinatario
-	$para = "hellow@joystick.com.mx";
+	$para = "angelshaparro@outlook.com";
 	// Debe ser un email del servidor local
-	$de = $para;
+	$de = $info["email"]
 
 	// Asunto del mensaje
 	$asunto = 'Nuevo mensaje - Blackparadox';
